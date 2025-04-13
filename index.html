@@ -27,6 +27,16 @@
       z-index: 0;
     }
 
+    .moon {
+      position: fixed;
+      top: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      animation: floatMoon 10s ease-in-out infinite alternate;
+      z-index: 0;
+    }
+
     @keyframes moveCharacter {
       0% { left: -150px; transform: scaleX(1); }
       49% { transform: scaleX(1); }
@@ -46,6 +56,10 @@
       width: 100px;
       animation: float2 7s ease-in-out infinite alternate;
       z-index: 0;
+    }
+    @keyframes floatMoon {
+      0% { transform: translate(-50%, 0); }
+      100% { transform: translate(-50%, -10px); }
     }
 
     .profile-pic {
@@ -97,6 +111,7 @@
   <!-- Animated Roblox Character -->
   <img src="3.png" alt="Roblox Character" class="background-character">
   <img src="alien.png" alt="Alien Character" class="alien">
+  <img src="bulan.png" alt="Bulan" class="moon">
 
   <div class="container">
     <!-- Logo -->
