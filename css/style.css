@@ -56,6 +56,16 @@
         animation: float 3s ease-in-out infinite;
     }
 
+    .rocket {
+        position: fixed;
+        z-index: 0;
+        bottom: 20%;
+        left: 25git;
+        transform: translateX(-50%);
+        width: 50px;
+        animation: moveRocket 3s ease-in-out infinite;
+    }
+
     .moon {
         position: fixed;
         z-index: 0;
@@ -75,6 +85,12 @@
         0% { transform: translateY(0); }
         50% { transform: translateY(-10px); }
         100% { transform: translateY(0); }
+    }
+
+        @keyframes moveRocket {
+        0% { left: -150px; transform: scaleX(1); }
+        50% { transform: translateX(-50%) rotate(10deg); }
+        100% { left: 100vw; transform: scaleX(-50%) rotate(0deg); }
     }
 
 
