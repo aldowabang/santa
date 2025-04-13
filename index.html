@@ -7,6 +7,118 @@
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
     body {
+      margin: 0;
+      padding: 30px;
+      background-color: #0d0d0d;
+      font-family: 'Press Start 2P', cursive;
+      color: #fff;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .background-character {
+      position: fixed;
+      bottom: 0;
+      left: -150px;
+      width: 120px;
+      height: auto;
+      opacity: 0.4;
+      animation: moveCharacter 20s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes moveCharacter {
+      0% { left: -150px; transform: scaleX(1); }
+      49% { transform: scaleX(1); }
+      50% { transform: scaleX(-1); }
+      100% { left: 100vw; transform: scaleX(-1); }
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px; /* Perbaiki kesalahan penulisan */
+      object-fit: cover; /* Tambahkan properti ini agar gambar sesuai dengan ukuran */
+      border-radius: 50%;
+      border: 3px solid #fff;
+      margin-bottom: 15px;
+    }
+
+    .logo {
+      width: 80px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .link-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    .link {
+      background-color: #007bff;
+      color: #fff;
+      padding: 14px;
+      border: none;
+      text-decoration: none;
+      font-size: 14px;
+      border-radius: 8px;
+      box-shadow: 0 4px #0056b3;
+      transition: transform 0.2s, background-color 0.2s;
+    }
+
+    .link:hover {
+      transform: scale(1.05);
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <!-- Animated Roblox Character -->
+  <img src="https://static.wikia.nocookie.net/roblox/images/f/f0/Guest_Character.png" alt="Roblox Character" class="background-character">
+
+  <div class="container">
+    <!-- Logo -->
+    <img src="2.png" alt="Roblox Logo" class="logo">
+    
+    <!-- Profile Picture -->
+    <img src="1.jpeg" class="profile-pic">
+
+    <!-- Username -->
+    <h1>mySansan10</h1>
+
+    <!-- Links -->
+    <div class="link-container">
+      <a class="link" href="https://www.tiktok.com/@mySansan10" target="_blank">TikTok</a>
+      <a class="link" href="https://www.instagram.com/mySansan10" target="_blank">Instagram</a>
+      <a class="link" href="https://chat.whatsapp.com/yourchannelid" target="_blank">Saluran WhatsApp</a>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>mySansan10 | Linktree</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body {
       background-color: #0d0d0d;
       font-family: 'Press Start 2P', cursive;
       color: #fff;
@@ -71,3 +183,4 @@
   </div>
 </body>
 </html>
+ -->
