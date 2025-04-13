@@ -31,4 +31,148 @@
 
     @keyframes twinkling {
       from { background-position: 0 0, 0 0; }
-      to { background-position:
+      to { background-position: -100px 100px, 0 0; }
+    }
+
+    .astronot, .alien, .planet, .planet2, .moon {
+      position: fixed;
+      z-index: 0;
+    }
+
+    .astronot {
+      left: 8%;
+      top: 40%;
+      width: 100px;
+      animation: float1 6s ease-in-out infinite alternate;
+    }
+
+    .alien {
+      right: 8%;
+      bottom: 10%;
+      width: 100px;
+      animation: float2 7s ease-in-out infinite alternate;
+    }
+
+    .planet {
+      right: 5%;
+      top: 20%;
+      width: 150px;
+      animation: spinPlanet 20s linear infinite;
+    }
+
+    .planet2 {
+      left: 5%;
+      top: 10%;
+      width: 100px;
+      animation: spinPlanet 30s linear infinite reverse;
+    }
+
+    .moon {
+      top: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      animation: floatMoon 10s ease-in-out infinite alternate;
+    }
+
+    @keyframes float1 {
+      0% { transform: translateY(0) rotate(0deg); }
+      100% { transform: translateY(-20px) rotate(5deg); }
+    }
+
+    @keyframes float2 {
+      0% { transform: translateY(0) scale(1); }
+      100% { transform: translateY(-25px) scale(1.05); }
+    }
+
+    @keyframes floatMoon {
+      0% { transform: translate(-50%, 0); }
+      100% { transform: translate(-50%, -10px); }
+    }
+
+    @keyframes spinPlanet {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      margin-bottom: 15px;
+    }
+
+    .logo {
+      width: 80px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .link-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    .link {
+      background-color: #007bff;
+      color: #fff;
+      padding: 14px;
+      border: none;
+      text-decoration: none;
+      font-size: 14px;
+      border-radius: 8px;
+      box-shadow: 0 4px #0056b3;
+      transition: transform 0.2s, background-color 0.2s;
+    }
+
+    .link:hover {
+      transform: scale(1.05);
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background stars -->
+  <div class="stars"></div>
+
+  <!-- Floating objects -->
+  <img src="astronot.png" class="astronot" alt="Astronot" onerror="this.style.display='none'">
+  <img src="alien.png" class="alien" alt="Alien" onerror="this.style.display='none'">
+  <img src="planet.png" class="planet" alt="Planet" onerror="this.style.display='none'">
+  <img src="planet2.png" class="planet2" alt="Planet 2" onerror="this.style.display='none'">
+  <img src="bulan.png" class="moon" alt="Moon" onerror="this.style.display='none'">
+
+  <div class="container">
+    <!-- Logo -->
+    <img src="56.svg" alt="Roblox Logo" class="logo" onerror="this.style.display='none'">
+
+    <!-- Profile Picture -->
+    <img src="1.jpeg" alt="Profile Picture" class="profile-pic" onerror="this.style.display='none'">
+
+    <!-- Username -->
+    <h1>mySansan10</h1>
+
+    <!-- Links -->
+    <div class="link-container">
+      <a class="link" href="https://www.tiktok.com/@mySansan10" target="_blank">TikTok</a>
+      <a class="link" href="https://www.instagram.com/mySansan10" target="_blank">Instagram</a>
+      <a class="link" href="https://chat.whatsapp.com/yourchannelid" target="_blank">Saluran WhatsApp</a>
+    </div>
+  </div>
+</body>
+</html>
+
