@@ -63,7 +63,7 @@
         left: 25git;
         transform: translateX(-50%);
         width: 50px;
-        animation: moveRocket 3s ease-in-out infinite;
+        animation: float 3s ease-in-out infinite;
     }
 
     .moon {
