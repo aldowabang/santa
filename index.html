@@ -21,28 +21,48 @@
       position: relative;
     }
 
-    /* Hilangkan stars dan animasi, langsung pakai background gambar luar angkasa */
-
-    .astronaut, .planet {
+    /* Semua objek floating tetap ada */
+    .astronaut, .alien, .planet, .planet2, .moon {
       position: absolute;
-      max-width: 25vw;
       height: auto;
-      z-index: 0; /* Letakkan di belakang semua konten */
+      z-index: 0; /* Di belakang konten utama */
+      pointer-events: none; /* Supaya tidak bisa diklik */
     }
 
     .astronaut {
       left: 5%;
-      top: 35%;
+      top: 40%;
+      width: 100px;
+    }
+
+    .alien {
+      right: 5%;
+      bottom: 10%;
+      width: 100px;
     }
 
     .planet {
       right: 5%;
+      top: 15%;
+      width: 150px;
+    }
+
+    .planet2 {
+      left: 5%;
       top: 10%;
+      width: 100px;
+    }
+
+    .moon {
+      top: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
     }
 
     .container {
       position: relative;
-      z-index: 1; /* Letakkan di atas elemen animasi */
+      z-index: 1; /* Supaya konten di atas gambar */
       max-width: 90%;
       margin: auto;
     }
@@ -106,11 +126,14 @@
 </head>
 <body>
 
-  <!-- Gambar luar angkasa sudah dijadikan background body -->
+  <!-- Gambar luar angkasa sebagai background -->
 
-  <!-- Objek hiasan -->
+  <!-- Floating objects -->
   <img src="astronot.png" class="astronaut" alt="Astronaut Roblox">
+  <img src="alien.png" class="alien" alt="Alien Roblox">
   <img src="planet.png" class="planet" alt="Planet">
+  <img src="planet2.png" class="planet2" alt="Planet 2">
+  <img src="bulan.png" class="moon" alt="Moon">
 
   <!-- Konten utama -->
   <div class="container">
