@@ -1,20 +1,23 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Linktree gaya luar angkasa oleh mySansan10 dengan animasi dan font retro keren.">
   <title>mySansan10 | Linktree</title>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      padding: 30px;
+      padding: 30px 15px;
       font-family: 'Press Start 2P', cursive;
       color: #fff;
       text-align: center;
-      overflow: hidden;
       background: #000;
+      overflow-x: hidden;
     }
 
     .stars {
@@ -25,7 +28,7 @@
         radial-gradient(white 1px, transparent 1px) repeat,
         linear-gradient(to bottom, #1b0033, #001d3d);
       background-size: 2px 2px, cover;
-      animation: twinkling 20s linear infinite;
+      animation: twinkling 12s linear infinite;
       z-index: 0;
     }
 
@@ -34,36 +37,34 @@
       to { background-position: -100px 100px, 0 0; }
     }
 
-    .astronot, .alien, .planet, .planet2, .moon {
-      position: fixed;
+    .astronaut, .alien, .planet, .planet2, .moon {
+      position: absolute;
+      max-width: 20vw;
+      height: auto;
       z-index: 0;
     }
 
-    .astronot {
-      left: 8%;
+    .astronaut {
+      left: 5%;
       top: 40%;
-      width: 100px;
       animation: float1 6s ease-in-out infinite alternate;
     }
 
     .alien {
-      right: 8%;
+      right: 5%;
       bottom: 10%;
-      width: 100px;
       animation: float2 7s ease-in-out infinite alternate;
     }
 
     .planet {
       right: 5%;
-      top: 20%;
-      width: 150px;
+      top: 15%;
       animation: spinPlanet 20s linear infinite;
     }
 
     .planet2 {
       left: 5%;
       top: 10%;
-      width: 100px;
       animation: spinPlanet 30s linear infinite reverse;
     }
 
@@ -71,7 +72,6 @@
       top: 5%;
       left: 50%;
       transform: translateX(-50%);
-      width: 120px;
       animation: floatMoon 10s ease-in-out infinite alternate;
     }
 
@@ -98,23 +98,29 @@
     .container {
       position: relative;
       z-index: 1;
+      max-width: 90%;
+      margin: auto;
     }
 
     .profile-pic {
-      width: 120px;
-      height: 120px;
+      width: 30vw;
+      max-width: 120px;
+      height: auto;
       border-radius: 50%;
       border: 3px solid #fff;
       margin-bottom: 15px;
     }
 
     .logo {
-      width: 80px;
+      width: 20vw;
+      max-width: 80px;
+      height: auto;
       margin-bottom: 20px;
     }
 
     h1 {
-      font-size: 16px;
+      font-size: 4vw;
+      max-font-size: 16px;
       margin-bottom: 20px;
     }
 
@@ -122,17 +128,16 @@
       display: flex;
       flex-direction: column;
       gap: 15px;
-      max-width: 300px;
+      max-width: 90%;
       margin: 0 auto;
     }
 
     .link {
       background-color: #007bff;
       color: #fff;
-      padding: 14px;
-      border: none;
+      padding: 14px 10px;
       text-decoration: none;
-      font-size: 14px;
+      font-size: 3vw;
       border-radius: 8px;
       box-shadow: 0 4px #0056b3;
       transition: transform 0.2s, background-color 0.2s;
@@ -142,31 +147,34 @@
       transform: scale(1.05);
       background-color: #0056b3;
     }
+
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 16px;
+      }
+
+      .link {
+        font-size: 14px;
+      }
+    }
   </style>
 </head>
 <body>
 
-  <!-- Background stars -->
+  <!-- Background layers -->
   <div class="stars"></div>
 
   <!-- Floating objects -->
-  <img src="astronot.png" class="astronot" alt="Astronot" onerror="this.style.display='none'">
-  <img src="alien.png" class="alien" alt="Alien" onerror="this.style.display='none'">
-  <img src="planet.png" class="planet" alt="Planet" onerror="this.style.display='none'">
-  <img src="planet2.png" class="planet2" alt="Planet 2" onerror="this.style.display='none'">
-  <img src="bulan.png" class="moon" alt="Moon" onerror="this.style.display='none'">
+  <img src="astronot.png" class="astronaut" alt="Astronaut Roblox">
+  <img src="alien.png" class="alien" alt="Alien Roblox">
+  <img src="planet.png" class="planet" alt="Planet">
+  <img src="planet2.png" class="planet2" alt="Planet 2">
+  <img src="bulan.png" class="moon" alt="Moon">
 
   <div class="container">
-    <!-- Logo -->
-    <img src="56.svg" alt="Roblox Logo" class="logo" onerror="this.style.display='none'">
-
-    <!-- Profile Picture -->
-    <img src="1.jpeg" alt="Profile Picture" class="profile-pic" onerror="this.style.display='none'">
-
-    <!-- Username -->
+    <img src="56.svg" alt="Roblox Logo" class="logo">
+    <img src="1.jpeg" alt="Profile Picture" class="profile-pic">
     <h1>mySansan10</h1>
-
-    <!-- Links -->
     <div class="link-container">
       <a class="link" href="https://www.tiktok.com/@mySansan10" target="_blank">TikTok</a>
       <a class="link" href="https://www.instagram.com/mySansan10" target="_blank">Instagram</a>
@@ -175,4 +183,3 @@
   </div>
 </body>
 </html>
-
