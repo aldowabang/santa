@@ -6,86 +6,55 @@
   <title>mySansan10 | Linktree</title>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
-      padding: 30px 15px;
+      padding: 30px;
+      background-color: #0d0d0d;
       font-family: 'Press Start 2P', cursive;
       color: #fff;
       text-align: center;
-      background: url('luar-angkasa.jpg') no-repeat center center/cover;
-      overflow-x: hidden;
-      position: relative;
+      overflow: hidden;
     }
 
-    /* Semua objek floating tetap ada */
-    .astronaut, .alien, .planet, .planet2, .moon {
-      position: absolute;
-      height: auto;
-      z-index: 0; /* Di belakang konten utama */
-      pointer-events: none; /* Supaya tidak bisa diklik */
-    }
-
-    .astronaut {
-      left: 5%;
-      top: 40%;
-      width: 100px;
-    }
-
-    .alien {
-      right: 5%;
-      bottom: 10%;
-      width: 100px;
-    }
-
-    .planet {
-      right: 5%;
-      top: 15%;
-      width: 150px;
-    }
-
-    .planet2 {
-      left: 5%;
-      top: 10%;
-      width: 100px;
-    }
-
-    .moon {
-      top: 5%;
-      left: 50%;
-      transform: translateX(-50%);
+    .background-character {
+      position: fixed;
+      bottom: 0;
+      left: -150px;
       width: 120px;
+      height: auto;
+      opacity: 0.4;
+      animation: moveCharacter 20s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes moveCharacter {
+      0% { left: -150px; transform: scaleX(1); }
+      49% { transform: scaleX(1); }
+      50% { transform: scaleX(-1); }
+      100% { left: 100vw; transform: scaleX(-1); }
     }
 
     .container {
       position: relative;
-      z-index: 1; /* Supaya konten di atas gambar */
-      max-width: 90%;
-      margin: auto;
+      z-index: 1;
     }
 
     .profile-pic {
-      width: 30vw;
-      max-width: 120px;
-      height: auto;
+      width: 120px;
+      height: 120px; /* Perbaiki kesalahan penulisan */
+      object-fit: cover; /* Tambahkan properti ini agar gambar sesuai dengan ukuran */
       border-radius: 50%;
       border: 3px solid #fff;
       margin-bottom: 15px;
     }
 
     .logo {
-      width: 20vw;
-      max-width: 80px;
-      height: auto;
+      width: 80px;
       margin-bottom: 20px;
     }
 
     h1 {
-      font-size: 4vw;
-      max-font-size: 16px;
+      font-size: 16px;
       margin-bottom: 20px;
     }
 
@@ -93,16 +62,17 @@
       display: flex;
       flex-direction: column;
       gap: 15px;
-      max-width: 90%;
+      max-width: 300px;
       margin: 0 auto;
     }
 
     .link {
       background-color: #007bff;
       color: #fff;
-      padding: 14px 10px;
+      padding: 14px;
+      border: none;
       text-decoration: none;
-      font-size: 3vw;
+      font-size: 14px;
       border-radius: 8px;
       box-shadow: 0 4px #0056b3;
       transition: transform 0.2s, background-color 0.2s;
@@ -112,39 +82,31 @@
       transform: scale(1.05);
       background-color: #0056b3;
     }
-
-    @media (min-width: 768px) {
-      h1 {
-        font-size: 16px;
-      }
-
-      .link {
-        font-size: 14px;
-      }
-    }
   </style>
 </head>
 <body>
+  <!-- Animated Roblox Character -->
+  <img src="3.png" alt="Roblox Character" class="background-character">
 
-  <!-- Gambar luar angkasa sebagai background -->
-
-  <!-- Floating objects -->
-  <img src="astronot.png" class="astronaut" alt="Astronaut Roblox">
-  <img src="alien.png" class="alien" alt="Alien Roblox">
-  <img src="planet.png" class="planet" alt="Planet">
-  <img src="planet2.png" class="planet2" alt="Planet 2">
-  <img src="bulan.png" class="moon" alt="Moon">
-
-  <!-- Konten utama -->
   <div class="container">
+    <!-- Logo -->
     <img src="56.svg" alt="Roblox Logo" class="logo">
-    <img src="1.jpeg" alt="Profile Picture" class="profile-pic">
+    
+    <!-- Profile Picture -->
+    <img src="1.jpeg" class="profile-pic">
+
+    <!-- Username -->
     <h1>mySansan10</h1>
+
+    <!-- Links -->
     <div class="link-container">
-      <a class="link" href="https://www.tiktok.com/@mySansan10" target="_blank">TikTok</a>
-      <a class="link" href="https://www.instagram.com/mySansan10" target="_blank">Instagram</a>
-      <a class="link" href="https://chat.whatsapp.com/yourchannelid" target="_blank">Saluran WhatsApp</a>
+      <a class="link" href="https://www.tiktok.com/@santanaaaya?_t=ZS-8vUbI7YLZas&_r=1" target="_blank">TikTok</a>
+      <a class="link" href="https://www.instagram.com/santaalumbanbatuu?igsh=ZjY5aTdzcjNlNnFv" target="_blank">Instagram</a>
+      <a class="link" href="https://whatsapp.com/channel/0029VbABGET8qIzq5onIBl2R" target="_blank">Saluran WhatsApp</a>
     </div>
   </div>
 </body>
 </html>
+
+
+
