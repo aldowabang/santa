@@ -1,0 +1,143 @@
+
+    body {
+        margin: 0;
+        padding: 30px;
+        background-color: #0d0d0d;
+        font-family: 'Press Start 2P', cursive;
+        color: #fff;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .background-character {
+        position: fixed;
+        bottom: 0;
+        left: -150px;
+        width: 120px;
+        height: auto;
+        opacity: 0.4;
+        animation: moveCharacter 20s linear infinite;
+        z-index: 0;
+    }
+
+    .planet {
+        position: fixed;
+        z-index: 0;
+        right: 5%;
+        top: 25%;
+        width: 150px;
+        animation: spinPlanet 20s linear infinite;
+    }
+
+    .planet2 {
+        position: fixed;
+        z-index: 0;
+        left: 5%;
+        top: 40%;
+        width: 150px;
+        animation: spinPlanet 30s linear infinite;
+    }
+
+    .alien-character {
+        right: 8%;
+        bottom: 10%;
+        width: 100px;
+        animation: float 3s ease-in-out infinite;
+        z-index: 0;
+        position: fixed;
+    }
+
+    .astronot{
+        position: fixed;
+        z-index: 0;
+        top: 60;
+        left: 10%;
+        width: 100px;
+        animation: float 3s ease-in-out infinite;
+    }
+
+    .moon {
+        position: fixed;
+        z-index: 0;
+        top: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 120px;
+        animation: floatMoon 10s ease-in-out infinite;
+    }
+
+    @keyframes spinPlanet {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    @keyframes float {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0); }
+    }
+
+
+    @keyframes moveCharacter {
+        0% { left: -150px; transform: scaleX(1); }
+        49% { transform: scaleX(1); }
+        50% { transform: scaleX(-1); }
+        100% { left: 100vw; transform: scaleX(-1); }
+    }
+
+    @keyframes floatMoon {
+        0% { transform: translate(-50%, 0); }
+        50% { transform: translate(-50%, -10px); }
+    }
+
+
+
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+    
+
+    .profile-pic {
+        width: 120px;
+        height: 120px; /* Perbaiki kesalahan penulisan */
+        object-fit: cover; /* Tambahkan properti ini agar gambar sesuai dengan ukuran */
+        border-radius: 50%;
+        border: 3px solid #fff;
+        margin-bottom: 15px;
+    }
+
+    .logo {
+        width: 80px;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .link-container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .link {
+        background-color: #007bff;
+        color: #fff;
+        padding: 14px;
+        border: none;
+        text-decoration: none;
+        font-size: 14px;
+        border-radius: 8px;
+        box-shadow: 0 4px #0056b3;
+        transition: transform 0.2s, background-color 0.2s;
+    }
+
+    .link:hover {
+        transform: scale(1.05);
+        background-color: #0056b3;
+    }
